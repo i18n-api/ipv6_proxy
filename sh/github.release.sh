@@ -17,8 +17,8 @@ cat <<EOF | tee $sh
 #!/usr/bin/env bash
 set -o allexport
 $(cat env.sh)
-set +o allexport
 . /root/i18n/conf/env/$NAME.sh
+set +o allexport
 $(tail -n +2 ./run.sh)
 EOF
 
