@@ -1,6 +1,6 @@
 [package]
 name = "ipv6_proxy"
-version = "0.1.17"
+version = "0.1.18"
 edition = "2021"
 authors = ["i18n.site@gmail.com", "zu1k <i@lgf.im>"]
 description = "Http proxy, every request from a separate IPv6 address."
