@@ -15,7 +15,7 @@ cargo v patch -y
 git describe --tags $(git rev-list --tags --max-count=1) | xargs git tag -d
 
 rm Cargo.lock
-git add -u
+git add .
 git commit -m. || true
 git push
 git push github main
