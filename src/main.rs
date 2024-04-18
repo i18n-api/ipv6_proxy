@@ -1,4 +1,9 @@
 #![feature(async_closure)]
+
+use jemallocator::Jemalloc;
+
+static GLOBAL: Jemalloc = Jemalloc;
+
 mod proxy;
 
 use std::{env, process::exit};
