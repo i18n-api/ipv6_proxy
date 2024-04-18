@@ -9,13 +9,12 @@ if ! [ -x "$(command -v cargo-v)" ]; then
   cargo install cargo-v
 fi
 
+gci
 ./clippy.sh
 cargo v patch -y
 
 tag=$(git describe --tags $(git rev-list --tags --max-count=1))
 
-rm Cargo.lock
-git add .
 git commit -m. || true
 git push
 git push github main $tag
