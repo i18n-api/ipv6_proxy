@@ -12,11 +12,11 @@ fi
 ./clippy.sh
 cargo v patch -y
 
-git describe --tags $(git rev-list --tags --max-count=1) | xargs git tag -d
+tag=$(git describe --tags $(git rev-list --tags --max-count=1))
 
 rm Cargo.lock
 git add .
 git commit -m. || true
 git push
-git push github main
+git push github main $tag
 # cargo publish --registry crates-io || true
