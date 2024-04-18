@@ -48,16 +48,14 @@ fi
 TZT=$ARCH-$OS.tar.zst
 cd os
 ZSTD_CLEVEL=19 tar -I zstd -cvpf ../$TZT .
-# cd ..
+cd ..
+
 # set +x
 # . $ROOT/../../conf/env/GITHUB_TAR.sh
 # $DIR/encrypt.sh $TZT $TZT_PASSWORD
 # set -x
-#
-# cd $ROOT
-META=$(cargo metadata --format-version=1 --no-deps | jq '.packages[] | .name + " " + .version' -r)
-NAME=$(echo $META | cut -d ' ' -f1)
-VER=$(echo $META | cut -d ' ' -f2)
+
+VER=$(cargo metadata --format-version=1 --no-deps | jq '.packages[] | .version' -r)
 LOG=../log/$VER.md
 
 if [ -f "$LOG" ]; then
