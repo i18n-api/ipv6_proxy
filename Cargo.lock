@@ -380,7 +380,7 @@ dependencies = [
 
 [[package]]
 name = "ipv6_proxy"
-version = "0.1.16"
+version = "0.1.17"
 dependencies = [
  "aok",
  "axum",
