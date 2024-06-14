@@ -1,0 +1,1 @@
+{ "dependencies": { "@prettier/plugin-pug": "^3.0.0", "prettier-plugin-toml": "^2.0.1" } }
