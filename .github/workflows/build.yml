@@ -48,7 +48,7 @@ jobs:
         run: |
           ./src/sh/github.release.sh
 
-      - name: 部署到线上服务器
-        shell: bash
-        run: |
-          ./src/sh/deploy.sh $(pwd)/dist
+      # - name: 部署到线上服务器
+      #   shell: bash
+      #   run: |
+      #     ./src/sh/deploy.sh $(pwd)/dist
